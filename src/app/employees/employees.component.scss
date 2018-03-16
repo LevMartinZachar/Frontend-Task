@@ -1,0 +1,57 @@
+#employeesWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F9;
+  height: 1116px;
+}
+
+#employeesControlPanel {
+  position: relative;
+  height: 160px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 46px;
+}
+
+.selectedPage {
+  font-size: 38px;
+}
+
+.statusFilter {
+  display: flex;
+  position: absolute;
+  list-style-type: none;
+  font-size: 20px;
+  bottom: 0;
+  border-width: 2px 0px 0px 2px;
+}
+
+.statusFilter, .statusFilter > li {
+  border-style: solid;
+  border-color: #E1E3E8;
+}
+
+.statusFilter li {
+  padding: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: white;
+  border-width: 0px 2px 2px 0px;
+}
+
+.employeeJobFilter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 182px;
+  margin-bottom: 16px;
+}
+
+#employeesGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 36px;
+}
+

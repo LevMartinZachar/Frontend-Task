@@ -1,0 +1,51 @@
+.employee {
+  width: 360px;
+  height: 320px;
+  margin: 12px;
+  background-color: white;
+  position: relative;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.employeeOptions {
+  position: absolute;
+  right: 0;
+  margin-right: 36px;
+  margin-top: 18px;
+  color: #C1D8DD;
+  font-size: 40px;
+  line-height: 10px;
+  width: 5px;
+  height: 5px;
+  word-wrap: break-word;
+}
+
+.employeeAvatar {
+  margin-top: 40px;
+}
+
+.employeeName {
+  display: block;
+  font-size: 22px;
+}
+
+.employeeJobPosition {
+  display: block;
+  font-size: 20px;
+  margin-top: 16px;
+  color: #969EAC;
+}
+
+.employeeStatus {
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 44px;
+  color: white;
+  padding: 11px;
+  width: 110px;
+  background-color: #13cf71;
+  border-radius: 4px;
+}
+
+
