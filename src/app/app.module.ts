@@ -12,6 +12,8 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
+import { ViewMenuComponent } from './view-menu/view-menu.component';
+import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
     HeaderMenuComponent,
     EmployeesComponent,
     EmployeeComponent,
-    DropdownMenuComponent
+    DropdownMenuComponent,
+    ViewMenuComponent,
+    AddNewEmployeeComponent
   ],
   imports: [
     BrowserModule,

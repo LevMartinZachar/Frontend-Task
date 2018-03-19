@@ -17,6 +17,55 @@
   font-size: 38px;
 }
 
+.uselessLetters {
+  display: flex;
+  position: absolute;
+  right: 303px;
+  top: 14px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.uselessLetters span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 64px;
+  height: 64px;
+  border: 6px solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+}
+
+.firstLetter {
+  top: -20px;
+  right: 110px;
+  color: orange;
+  background-color: #F5E5C8;
+}
+
+.secondLetter {
+  top: -20px;
+  right: 66px;
+  color: #7C84FE;
+  background-color: #DADCFB;
+}
+
+.thirdLetter {
+  top: -20px;
+  right: 24px;
+  color: #1EBD9D;
+  background-color: #C9EAE7;
+}
+
+.fourthLetter {
+  top: -20px;
+  right: -20px;
+  color: #A56ABD;
+  background-color: #EBDEF0;
+}
+
 .statusFilter {
   display: flex;
   position: absolute;
@@ -45,6 +94,11 @@
   bottom: 0;
   margin-right: 182px;
   margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.employeeJobFilter label {
+  color: #C7C5C3;
 }
 
 #employeesGrid {

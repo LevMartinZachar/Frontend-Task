@@ -1,6 +1,13 @@
 <div  id="employeesWrapper">
   <div id="employeesControlPanel">
     <label class="selectedPage">Employee</label>
+    <div class="uselessLetters">
+      <span class="firstLetter">A</span>
+      <span class="secondLetter">N</span>
+      <span class="thirdLetter">S</span>
+      <span class="fourthLetter">M</span>
+    </div>
+    <app-add-new-employee></app-add-new-employee>
     <ul class="statusFilter">
       <li>All</li>
       <li>Active</li>
@@ -13,6 +20,7 @@
       <label>Filter by</label>
         <app-dropdown-menu></app-dropdown-menu>
     </div>
+      <app-view-menu></app-view-menu>
   </div>
   <div id="employeesGrid">
     <app-employee></app-employee>

@@ -1,0 +1,16 @@
+.viewMenu {
+  display: flex;
+  position: absolute;
+  list-style-type: none;
+  bottom: 0;
+  right: 0;
+}
+
+.viewMenu li {
+  color: #C1D8DD;
+  text-align: center;
+  font-size: 50px;
+  line-height: 10px;
+  width: 40px;
+  word-wrap: break-word;
+}
