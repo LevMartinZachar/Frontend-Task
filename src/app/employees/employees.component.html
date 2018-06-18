@@ -1,35 +1,37 @@
-<div  id="employeesWrapper">
-  <div id="employeesControlPanel">
-    <label class="selectedPage">Employee</label>
-    <div class="uselessLetters">
-      <span class="firstLetter">A</span>
-      <span class="secondLetter">N</span>
-      <span class="thirdLetter">S</span>
-      <span class="fourthLetter">M</span>
+<div  class="employees-wrapper">
+  <div class="employees-control-panel">
+    <label class="selected-page">Employee</label>
+    <div class="useless-letters">
+      <span class="first-letter useless-letters-span">A</span>
+      <span class="second-letter useless-letters-span">N</span>
+      <span class="third-letter useless-letters-span">S</span>
+      <span class="fourth-letter useless-letters-span">M</span>
     </div>
-    <app-add-new-employee></app-add-new-employee>
-    <ul class="statusFilter">
-      <li>All</li>
-      <li>Active</li>
-      <li>Terminated</li>
-      <li>Deceased</li>
-      <li>Resigned</li>
-      <li>Trash</li>
+    <!-- <app-add-new-employee></app-add-new-employee> -->
+    <div class="addNewEmployeeButton" (click)="showFormChange.emit(!showForm)">
+      <span class="customAddition">
+        <i class="material-icons">add</i>
+      </span>
+          <span class="addNewEmployeeText">
+        Add New Employee
+      </span>
+    </div>
+    <ul class="status-filter">
+      <li class="status-filter-li"
+          *ngFor="let status of statuses"
+          (click)="filterByStatus(status)">
+        {{status}}
+      </li>
     </ul>
-    <div class="employeeJobFilter">
-      <label>Filter by</label>
+    <div class="employee-job-filter">
+      <label class="employee-job-filter-label">Filter by </label>
         <app-dropdown-menu></app-dropdown-menu>
     </div>
       <app-view-menu></app-view-menu>
   </div>
-  <div id="employeesGrid">
-    <app-employee></app-employee>
-    <app-employee></app-employee>
-    <app-employee></app-employee>
-    <app-employee></app-employee>
-    <app-employee></app-employee>
-    <app-employee></app-employee>
-    <app-employee></app-employee>
-    <app-employee></app-employee>
+  <div class="employees-grid">
+    <ng-container *ngFor="let employee of employees$ | async">
+      <app-employee [employee]="employee"></app-employee>
+    </ng-container>
   </div>
 </div>

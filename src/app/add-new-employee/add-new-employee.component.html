@@ -1,8 +1,29 @@
-<div class="addNewEmployeeButton">
+<div class="addNewEmployeeButton" (click)="viewForm">
   <span class="customAddition">
-    +
+    <i class="material-icons">add</i>
   </span>
   <span class="addNewEmployeeText">
     Add New Employee
   </span>
 </div>
+
+<!--
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <div>
+    <button type="submit">Save</button>
+  </div>
+
+  <div>
+    <label>Name:
+      <input formControlName="name">
+    </label>
+  </div>
+
+  <div>
+    <h4>Department:</h4>
+    <label class="center-block"><input type="radio" formControlName="power" value="flight">Development</label>
+    <label class="center-block"><input type="radio" formControlName="power" value="x-ray vision">Content</label>
+    <label class="center-block"><input type="radio" formControlName="power" value="strength">Business development</label>
+  </div>
+</form>
+-->

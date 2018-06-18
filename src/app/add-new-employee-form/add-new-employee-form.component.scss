@@ -1,0 +1,63 @@
+.employee-form-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  box-shadow: 0px 0px 5px black;
+  background-color: #fff;
+  padding: 20px;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.employee-form {
+  width: 100%;
+  position: relative;
+}
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-close-button {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  background-color: #ff4444;
+  box-shadow: 0px 0px #f00;
+}
+
+.form-control {
+  display: block;
+  border: 1px solid #E1E3E8;
+  border-radius: 2px;
+  padding: 4px;
+  width: 100%;
+}
+
+.form-submit-button {
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  color: white;
+  padding: 4px;
+  min-width: 80px;
+  background-color: #13cf71;
+  border-radius: 4px;
+}
+
+.form-radio {
+  display: block;
+  margin: 2px;
+}
+
+.center-block {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}

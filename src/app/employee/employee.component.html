@@ -1,7 +1,13 @@
 <div class="employee">
-  <span class="employeeOptions">...</span>
-  <img class="employeeAvatar" src="../assets/images/avatar.png">
-  <label class="employeeName"><br>Ashraf Hossain<br></label>
-  <label class="employeeJobPosition">Designer<br></label>
-  <span class="employeeStatus">Active<br></span>
+  <span class="employee-options">...</span>
+  <img class="employee-avatar" src="{{employee.avatar}}">
+  <label class="employee-name"><br>{{employee.name}}<br></label>
+  <label class="employee-job-position">{{employee.position}}<br></label>
+  <span class="employee-status"
+        [ngClass]="{
+          'employee-status-terminated': employee.status == 'Terminated',
+          'employee-status-resigned': employee.status == 'Resigned'}">
+    {{employee.status}}
+    <br>
+  </span>
 </div>

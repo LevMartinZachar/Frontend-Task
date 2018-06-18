@@ -1,11 +1,21 @@
-#employeesWrapper {
+.employees-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: #F6F6F9;
   height: 1116px;
 }
 
-#employeesControlPanel {
+.employee-form-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  z-index: 10;
+}
+
+.employees-control-panel {
   position: relative;
   height: 160px;
   margin-left: 50px;
@@ -13,95 +23,133 @@
   margin-top: 46px;
 }
 
-.selectedPage {
+.selected-page {
   font-size: 38px;
 }
 
-.uselessLetters {
+.useless-letters {
   display: flex;
   position: absolute;
-  right: 303px;
-  top: 14px;
+  right: 312px;
+  top: 18px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.uselessLetters span {
+.useless-letters-span {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 64px;
-  height: 64px;
-  border: 6px solid rgba(255, 255, 255, 1);
+  width: 52px;
+  height: 52px;
+  border: 0px solid;
   border-radius: 50%;
+  margin-right: 5px;
+  box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.7);
 }
 
-.firstLetter {
+.first-letter {
   top: -20px;
   right: 110px;
   color: orange;
   background-color: #F5E5C8;
 }
 
-.secondLetter {
+.second-letter {
   top: -20px;
   right: 66px;
   color: #7C84FE;
   background-color: #DADCFB;
 }
 
-.thirdLetter {
+.third-letter {
   top: -20px;
   right: 24px;
   color: #1EBD9D;
   background-color: #C9EAE7;
 }
 
-.fourthLetter {
+.fourth-letter {
   top: -20px;
   right: -20px;
   color: #A56ABD;
   background-color: #EBDEF0;
 }
 
-.statusFilter {
+.status-filter {
   display: flex;
   position: absolute;
   list-style-type: none;
   font-size: 20px;
   bottom: 0;
-  border-width: 2px 0px 0px 2px;
+  border-width: 3px 0px 0px 3px;
 }
 
-.statusFilter, .statusFilter > li {
+.status-filter, .status-filter-li {
   border-style: solid;
   border-color: #E1E3E8;
 }
 
-.statusFilter li {
-  padding: 18px;
+.status-filter-li {
+  padding: 16px;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: white;
-  border-width: 0px 2px 2px 0px;
+  background-color: #F6F6F9;
+  color: #ABA8A6;
+  border-width: 0px 3px 3px 0px;
+  cursor: pointer;
 }
 
-.employeeJobFilter {
+.status-filter-li:hover {
+  box-shadow: 0px 0px 5px black;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.employee-job-filter {
   position: absolute;
   right: 0;
   bottom: 0;
-  margin-right: 182px;
+  margin-right: 205px;
   margin-bottom: 16px;
   font-size: 20px;
 }
 
-.employeeJobFilter label {
-  color: #C7C5C3;
+.employee-job-filter-label {
+  color: #A8A5A4;
 }
 
-#employeesGrid {
+.addNewEmployeeButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 271px;
+  height: 62px;
+  background-color: white;
+  border: 3px solid #ECEEF5;
+  border-radius: 8px;
+  right: 0;
+  top: 0;
+  margin-top: -6px;
+  cursor: pointer;
+}
+
+.addNewEmployeeText {
+  font-size: 20px;
+}
+
+.material-icons {
+  color: #2071DB;
+  font-size: 30px;
+  font-weight: 900;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+.employees-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

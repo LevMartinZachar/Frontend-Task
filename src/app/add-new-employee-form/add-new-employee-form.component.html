@@ -1,0 +1,24 @@
+<!-- <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()"> -->
+<div class="employee-form-container" [style.display]="showForm ? 'flex': 'none'">
+  <form class="employee-form" [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <h2 class="form-heading">Employee Form</h2>
+    <button class="form-close-button">X</button>
+    <div class="form-group">
+      <label class="center-block"> Avatar:
+        <input class="form-control" formControlName="avatar">
+      </label>
+      <label class="center-block"> Name:
+        <input class="form-control" formControlName="name">
+      </label>
+    </div>
+    <div class="form-group radio">
+      <label class="center-block">Departments:</label>
+      <label *ngFor="let pos of position" class="form-radio"><input type="radio" name="position" formControlName="position" value="{{pos}}">{{pos}}</label>
+    </div>
+    <div class="form-group radio">
+      <label class="center-block">Status:</label>
+      <label *ngFor="let status of statuses" class="form-radio"><input type="radio" name="status" formControlName="status" value="{{status}}">{{status}}</label>
+    </div>
+    <button class="form-submit-button" type="submit" (click)="showFormChange.emit(!showForm)">Submit</button>
+  </form>
+</div>

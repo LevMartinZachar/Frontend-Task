@@ -1,16 +1,64 @@
 .viewMenu {
-  display: flex;
   position: absolute;
-  list-style-type: none;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  width: 131px;
+  height: 57px;
+  background-color: #F2F3F8;
+  border: 3px solid #E4E7EB;
 }
 
-.viewMenu li {
-  color: #C1D8DD;
-  text-align: center;
-  font-size: 50px;
-  line-height: 10px;
-  width: 40px;
-  word-wrap: break-word;
+.viewGrid {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  line-height: 5px;
+  font-size: 80px;
+  color: #C4D7E0;
+  margin-left: 74px;
+  margin-top: -6px;
+}
+
+.viewGrid span {
+  width: 14px;
+  height: 14px;
+}
+
+.viewList {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 27px;
+  height: 20px;
+  line-height: 0px;
+  font-size: 61px;
+  font-weight: bold;
+  color: #C4D7E0;
+  margin-left: 18px;
+  margin-top: 4px;
+}
+
+.viewList span {
+  width: 27px;
+  height: 15px;
+  overflow: hidden;
+}
+
+.firstLine {
+  position: absolute;
+  margin-top: 10px;
+}
+
+.secondLine {
+  position: absolute;
+  margin-top: 17px;
+}
+
+.thirdLine {
+  position: absolute;
+  margin-top: 24px;
 }

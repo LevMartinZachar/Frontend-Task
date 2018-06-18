@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,6 +15,9 @@ import { EmployeeComponent } from './employee/employee.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 import { ViewMenuComponent } from './view-menu/view-menu.component';
 import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.component';
+import { AppService } from './app.service';
+import { AddNewEmployeeFormComponent } from './add-new-employee-form/add-new-employee-form.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,14 +28,17 @@ import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.com
     EmployeeComponent,
     DropdownMenuComponent,
     ViewMenuComponent,
-    AddNewEmployeeComponent
+    AddNewEmployeeComponent,
+    AddNewEmployeeFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    CommonModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

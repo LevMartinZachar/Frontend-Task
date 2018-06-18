@@ -1,10 +1,11 @@
 <div id="wrapper">
+  <app-add-new-employee-form [(showForm)]="showForm"></app-add-new-employee-form>
   <div id="menuWrapper">
     <app-navigation-menu></app-navigation-menu>
   </div>
   <div id="headerWrapper">
     <app-header-menu [(yolo)]="foo"></app-header-menu>
-    <app-employees></app-employees>
+    <app-employees [(showForm)]="showForm"></app-employees>
   </div>
   <router-outlet></router-outlet>
 </div>

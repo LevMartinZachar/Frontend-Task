@@ -1,4 +1,13 @@
-<ul class="viewMenu">
-  <li>___</li>
-  <li>....</li>
-</ul>
+<div class="viewMenu">
+  <div class="viewList" (click)="changeView(viewOption.List)">
+    <span class="firstLine">-</span>
+    <span class="secondLine">-</span>
+    <span class="thirdLine">-</span>
+  </div>
+  <div class="viewGrid" (click)="changeView(viewOption.Grid)">
+    <span>.</span>
+    <span>.</span>
+    <span>.</span>
+    <span>.</span>
+  </div>
+</div>
