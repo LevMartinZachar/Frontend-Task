@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   foo: string;
 
-  showForm: boolean = false;
+  showForm = false;
 }

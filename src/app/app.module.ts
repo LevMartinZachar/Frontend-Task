@@ -19,6 +19,15 @@ import { AppService } from './app.service';
 import { AddNewEmployeeFormComponent } from './add-new-employee-form/add-new-employee-form.component';
 import { CommonModule } from '@angular/common';
 
+import { StoreModule } from '@ngrx/store';
+//
+import { reducers } from './store';
+import { EffectsModule } from '@ngrx/effects';
+
+// import { StoreDevtools } from '@ngrx/store-devtools';
+// import { storeFreeze } from 'ngrx-store-freeze';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +45,9 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     ReactiveFormsModule,
     CommonModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    StoreModule.forRoot({reducers})
+    // EffectsModule.forRoot([])
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

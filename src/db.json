@@ -1,0 +1,190 @@
+{
+  "statuses": [
+    {
+      "id": 1,
+      "name": "All"
+    },
+    {
+      "id": 2,
+      "name": "Active"
+    },
+    {
+      "id": 3,
+      "name": "Terminated"
+    },
+    {
+      "id": 4,
+      "name": "Deceased"
+    },
+    {
+      "id": 5,
+      "name": "Resigned"
+    },
+    {
+      "id": 6,
+      "name": "Trash"
+    }
+  ],
+  "positions": [
+    {
+      "id": 1,
+      "name": "Designer"
+    },
+    {
+      "id": 2,
+      "name": "Writer"
+    },
+    {
+      "id": 3,
+      "name": "Developer"
+    },
+    {
+      "id": 4,
+      "name": "Admin"
+    },
+    {
+      "id": 5,
+      "name": "Business Development"
+    },
+    {
+      "id": 6,
+      "name": "Development"
+    },
+    {
+      "id": 7,
+      "name": "Content"
+    }
+  ],
+  //export const EMPLOYEES: EmployeeModel[] = [
+  //{ avatar: '../assets/images/avatar.png', name: 'Ashraf Hossain', position: 'Designer', status: 'Active' },
+  //{ avatar: '../assets/images/avatar.png', name: 'Nayem Hasan', position: 'Writer', status: 'Active' },
+  //{ avatar: '../assets/images/avatar.png', name: 'Sumayia Siddik', position: 'Developer', status: 'Active' },
+  //{ avatar: '../assets/images/avatar.png', name: 'Nazir Ahmed', position: 'Admin', status: 'Active' },
+  //{ avatar: '../assets/images/avatar.png', name: 'Sabbir Ahmed', position: 'Developer', status: 'Active' },
+  //{ avatar: '../assets/images/avatar.png', name: 'Habibur Rahman', position: 'Designer', status: 'Active' },
+  //{ avatar: '../assets/images/avatar.png', name: 'Sekander Badsha', position: 'Business Development', status: 'Resigned' },
+  //{ avatar: '../assets/images/avatar.png', name: 'Ranan Hasan', position: 'Content', status: 'Terminated' }
+  //]; readonly position = ['Designer', 'Writer', 'Developer', 'Admin', 'Business', 'Development', 'Content'];
+  "employees": [
+    {
+      "id": 1,
+      "avatar": "../assets/images/avatar.png",
+      "name": "Ashraf Hossain",
+      "position":
+        {
+          "id": 1,
+          "name": "Designer"
+        },
+      "status":
+        {
+          "id": 2,
+          "name": "Active"
+        }
+    },
+    {
+      "id": 2,
+      "avatar": "../assets/images/avatar.png",
+      "name": "Nayem Hasan",
+      "position":
+      {
+        "id": 2,
+        "name": "Writer"
+      },
+      "status":
+      {
+        "id": 2,
+        "name": "Active"
+      }
+    },
+    {
+      "id": 3,
+      "avatar": "../assets/images/avatar.png",
+      "name": "Sumayia Siddik",
+      "position":
+      {
+        "id": 3,
+        "name": "Developer"
+      },
+      "status":
+      {
+        "id": 2,
+        "name": "Active"
+      }
+    },
+    {
+      "id": 4,
+      "avatar": "../assets/images/avatar.png",
+      "name": "Nazir Ahmed",
+      "position":
+      {
+        "id": 4,
+        "name": "Admin"
+      },
+      "status":
+      {
+        "id": 2,
+        "name": "Active"
+      }
+    },
+    {
+      "id": 5,
+      "avatar": "../assets/images/avatar.png",
+      "name": "Sabbir Ahmed",
+      "position":
+      {
+        "id": 3,
+        "name": "Developer"
+      },
+      "status":
+      {
+        "id": 2,
+        "name": "Active"
+      }
+    },
+    {
+      "id": 6,
+      "avatar": "../assets/images/avatar.png",
+      "name": "Habibur Rahman",
+      "position":
+      {
+        "id": 1,
+        "name": "Designer"
+      },
+      "status":
+      {
+        "id": 2,
+        "name": "Active"
+      }
+    },
+    {
+      "id": 7,
+      "avatar": "../assets/images/avatar.png",
+      "name": "Habibur Rahman",
+      "position":
+      {
+        "id": 5,
+        "name": "Business Development"
+      },
+      "status":
+      {
+        "id": 5,
+        "name": "Resigned"
+      }
+    },
+    {
+      "id": 8,
+      "avatar": "../assets/images/avatar.png",
+      "name": "Ranan Hasan",
+      "position":
+      {
+        "id": 7,
+        "name": "Content"
+      },
+      "status":
+      {
+        "id": 3,
+        "name": "Terminated"
+      }
+    }
+  ]
+}

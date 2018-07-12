@@ -88,10 +88,10 @@
       "never-prefix"
     ],
     "label-position": true,
-    "linebreak-style": [
-      true,
-      "LF"
-    ],
+//    "linebreak-style": [
+//      true,
+//      "LF"
+//    ],
     "max-classes-per-file": [
       true,
       1

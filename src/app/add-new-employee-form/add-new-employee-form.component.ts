@@ -7,6 +7,7 @@ import { AppService } from '../app.service';
   templateUrl: './add-new-employee-form.component.html',
   styleUrls: ['./add-new-employee-form.component.scss']
 })
+
 export class AddNewEmployeeFormComponent {
 
   readonly statuses = ['Active', 'Terminated', 'Deceased', 'Resigned', 'Trash'];
@@ -22,7 +23,7 @@ export class AddNewEmployeeFormComponent {
     this.createForm();
   }
 
-  createForm() {
+  createForm(): void {
     this.employeeForm = this.fb.group({
       avatar: '',
       name: ['', Validators.required ],
@@ -31,7 +32,7 @@ export class AddNewEmployeeFormComponent {
     });
   }
 
-  rebuildForm() {
+  rebuildForm(): void {
     this.employeeForm.reset({
       avatar: '',
       name: '',
@@ -40,7 +41,7 @@ export class AddNewEmployeeFormComponent {
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.appService.addNewEmployee(this.employeeForm.value);
     this.rebuildForm();
   }
