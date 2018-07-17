@@ -1,12 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-// import { AppService } from '../app.service';
-// import { map } from 'rxjs/operators';
-// import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-// import { combineLatest } from 'rxjs/observable/combineLatest';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Store } from '@ngrx/store';
-// import { Observable } from 'rxjs/Observable';
 import * as fromStore from '../store';
+
+import { EmployeeStatus } from '../models/ui-state.model';
+import { FilterEmployees } from '../store/actions/ui-state.actions';
 
 @Component({
   selector: 'app-employees',
@@ -14,12 +12,14 @@ import * as fromStore from '../store';
   styleUrls: ['./employees.component.scss']
 })
 
-export class EmployeesComponent{
+export class EmployeesComponent {
 
   @Input() showForm: boolean;
 
   @Output() showFormChange = new EventEmitter<boolean>();
 
+  statuses$ = this.store.select(fromStore.getAllStatuses);
+  employees$ = this.store.select(fromStore.getFilteredEmployees);
   // readonly status$ = new BehaviorSubject('All');
   // // readonly chosenView$ = new BehaviorSubject(viewOption.Grid);
   //
@@ -45,9 +45,9 @@ export class EmployeesComponent{
   //   this.chosenView$.next(view);
   // }
 
-  // constructor(private store: Store<fromStore.PersonnelState>) {}
-  //
-  // ngOnInit() {
-  //   this.store.select('').subscribe(state => {console.log(state); });
-  // }
+  filterByStatus(status: EmployeeStatus): void {
+    this.store.dispatch(new FilterEmployees(status));
+  }
+
+  constructor(private store: Store<fromStore.AppStateModel>) {}
 }

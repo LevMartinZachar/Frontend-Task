@@ -4,6 +4,8 @@ import { EmployeeModel } from './employee.model';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
+// Has been replaced by store
+
 @Injectable()
 export class AppService {
 
@@ -26,12 +28,3 @@ export class AppService {
     return status === 'All' ? employees : employees.filter((employee) => employee.status === status);
   }
 }
-
-/*
-* Add new employee should return a signle instance of an Observable,
-* in fact, all services should return Observables?
-*
-* Nieco dat na false pri forme
-*
-* What are my states? (Statuses, Employees, Navigation)
-* */

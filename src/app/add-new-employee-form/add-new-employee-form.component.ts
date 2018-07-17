@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AppService } from '../app.service';
+import * as fromStore from '../store';
+import { Store } from '@ngrx/store';
+import { CREATE_EMPLOYEE_SUCCESS } from '../store/actions/employees.action';
 
 @Component({
   selector: 'app-add-new-employee-form',
@@ -10,18 +12,13 @@ import { AppService } from '../app.service';
 
 export class AddNewEmployeeFormComponent {
 
-  readonly statuses = ['Active', 'Terminated', 'Deceased', 'Resigned', 'Trash'];
-  readonly position = ['Designer', 'Writer', 'Developer', 'Admin', 'Business', 'Development', 'Content'];
-
   @Input() showForm: boolean;
 
   @Output() showFormChange = new EventEmitter<boolean>();
 
   employeeForm: FormGroup;
-
-  constructor(private fb: FormBuilder, private appService: AppService) {
-    this.createForm();
-  }
+  statuses$ = this.store.select(fromStore.getAllStatuses);
+  positions$ = this.store.select(fromStore.getAllPositions);
 
   createForm(): void {
     this.employeeForm = this.fb.group({
@@ -42,7 +39,19 @@ export class AddNewEmployeeFormComponent {
   }
 
   onSubmit(): void {
-    this.appService.addNewEmployee(this.employeeForm.value);
+    // this.appService.addNewEmployee(this.employeeForm.value);
+
+    this.store.dispatch({type: CREATE_EMPLOYEE_SUCCESS, payload: {
+        id: Math.floor(Math.random() * 1337) + 1,
+        avatar: '../assets/images/avatar.png',
+        name: this.employeeForm.value.name,
+        position: this.employeeForm.value.position,
+        status: this.employeeForm.value.status
+      }});
     this.rebuildForm();
+  }
+
+  constructor(private fb: FormBuilder, private store: Store<fromStore.AppStateModel>) {
+    this.createForm();
   }
 }

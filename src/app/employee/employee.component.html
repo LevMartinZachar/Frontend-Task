@@ -6,7 +6,9 @@
   <span class="employee-status"
         [ngClass]="{
           'employee-status-terminated': employee.status == 'Terminated',
-          'employee-status-resigned': employee.status == 'Resigned'}">
+          'employee-status-deceased': employee.status == 'Deceased',
+          'employee-status-resigned': employee.status == 'Resigned',
+          'employee-status-trash': employee.status == 'Trash'}">
     {{employee.status}}
     <br>
   </span>

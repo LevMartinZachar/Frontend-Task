@@ -18,7 +18,7 @@
     </div>
     <ul class="status-filter">
       <li class="status-filter-li"
-          *ngFor="let status of statuses"
+          *ngFor="let status of statuses$ | async"
           (click)="filterByStatus(status)">
         {{status}}
       </li>

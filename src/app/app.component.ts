@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  foo: string;
-
+  // Should be added to store
   showForm = false;
 }

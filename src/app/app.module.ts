@@ -20,9 +20,9 @@ import { AddNewEmployeeFormComponent } from './add-new-employee-form/add-new-emp
 import { CommonModule } from '@angular/common';
 
 import { StoreModule } from '@ngrx/store';
-//
 import { reducers } from './store';
-import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+// import { EffectsModule } from '@ngrx/effects';
 
 // import { StoreDevtools } from '@ngrx/store-devtools';
 // import { storeFreeze } from 'ngrx-store-freeze';
@@ -46,7 +46,8 @@ import { EffectsModule } from '@ngrx/effects';
     ReactiveFormsModule,
     CommonModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-    StoreModule.forRoot({reducers})
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument(),
     // EffectsModule.forRoot([])
   ],
   providers: [AppService],

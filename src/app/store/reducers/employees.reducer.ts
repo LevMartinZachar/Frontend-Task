@@ -1,31 +1,17 @@
 import * as fromEmployees from '../actions/employees.action';
+import * as jsondata from '../../../db.json';
 
 import { EmployeeModel } from '../../models/employee.model';
 
+const jsonEmployeesStringifyed = (<any>jsondata).employees.map(JSON.stringify);
+const jsonEmployeesParsed = jsonEmployeesStringifyed.map(JSON.parse);
+
 export interface EmployeeState {
   data: EmployeeModel[];
-  loaded: boolean;
-  loading: boolean;
 }
 
 export const initialState: EmployeeState = {
-  data: [{
-    id: 1,
-    avatar: '../assets/images/avatar.png',
-    name: 'Ashraf Hossain',
-    position:
-      {
-        id: 1,
-        name: 'Designer'
-      },
-    status:
-      {
-        id: 2,
-        name: 'Active'
-      }
-  }],
-  loaded: false,
-  loading: false
+  data: jsonEmployeesParsed,
 };
 
 export function reducer(state: EmployeeState = initialState, action: fromEmployees.EmployeesAction): EmployeeState {
@@ -33,21 +19,15 @@ export function reducer(state: EmployeeState = initialState, action: fromEmploye
     case fromEmployees.LOAD_EMPLOYEES: {
         return {
           ...state,
-          loading: true
         };
     }
-    case fromEmployees.LOAD_EMPLOYEES_SUCCESS: {
+    case fromEmployees.CREATE_EMPLOYEE_SUCCESS: {
       return {
         ...state,
-        loading: false,
-        loaded: true
-      };
-    }
-    case fromEmployees.LOAD_EMPLOYEES_FAIL: {
-      return {
-        ...state,
-        loading: false,
-        loaded: false
+        data: [
+          action.payload,
+          ...state.data,
+        ]
       };
     }
   }
@@ -55,7 +35,5 @@ export function reducer(state: EmployeeState = initialState, action: fromEmploye
   return state;
 }
 
-export const getEmployeesLoading = (state: EmployeeState) => state.loading;
-export const getEmployeesLoaded = (state: EmployeeState) => state.loaded;
 export const getEmployees = (state: EmployeeState) => state.data;
 
